@@ -1,15 +1,6 @@
 <?php
 include 'parts/header.php';
-?>
-<?php
-    $hostname = 'localhost';
-    $username = 'root';
-    $password = '';
-    $dbname = 'php-project-1';
-
-    //Database Connection
-    $db = new mysqli($hostname, $username, $password, $dbname);
-
+include 'lib/db.php';
 ?>
 
 <?php
@@ -19,27 +10,15 @@ if (isset($_POST['form_submit'])) {
     $price = $_POST['product_price'];
     $piece = $_POST['product_piece'];
 
-   /*  $sql = "INSERT INTO  students ( name, roll, reg) VALUES('$name', '$price', '$piece',)";
-
-    $status = $db->query($sql);
-
-    if($status){
-        echo ('Data submited successfully.');
-    }
-    else{
-        echo ('Data submited failed.');
-    } */
-
     $sql = "INSERT INTO product (product_name, product_price, product_piece) VALUES ('$name', '$price', '$piece')";
 
     $status = $db->query($sql);
 
-    if($status){
+    if ($status) {
         echo 'Data submited successfully.';
-    }else{
+    } else {
         echo 'Data submited failed.';
     }
-
 
 }
 ?>

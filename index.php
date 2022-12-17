@@ -1,13 +1,17 @@
 <?php
 include 'parts/header.php';
+include 'lib/db.php';
+
+$sql = "SELECT * FROM product  ";
+$allData = $db->query($sql);
 ?>
 <section class="content-section py-5">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <?php
-                    require_once 'parts/sidebar.php';
-                    ?>
+                require_once 'parts/sidebar.php';
+                ?>
             </div>
             <div class="col-sm-9">
                 <h3> Product list
@@ -24,18 +28,40 @@ include 'parts/header.php';
                         <th>product pieces</th>
                         <th>Action</th>
                     </tr>
+
+                    <?php
+                    while ($product = $allData->fetch_assoc()) {
+
+
+                    ?>
+
                     <tr>
-                        <td> 01 </td>
-                        <td>Tarmasin</td>
-                        <td>5000</td>
-                        <td>5</td>
+                        <td>
+                            <?php echo $product['si_no']; ?>
+                        </td>
+                        <td>
+                            <?php echo $product['product_name']; ?>
+                        </td>
+                        <td>
+                            <?php echo $product['product_price']; ?>
+                        </td>
+                        <td>
+                            <?php echo $product['product_piece']; ?>
+                        </td>
                         <td>
                             <a href="" class="btn btn-success btn-sm">Edit</a>
-                            <a href="" class="btn btn-danger btn-sm">Delete</a>
+
+                            <a href="delete.php?<?php echo $product['si_no']; ?>"
+                                onclick="return confirm('Do you went to delete this data? ')"
+                                class="btn btn-danger btn-sm">Delete</a>
 
                         </td>
 
                     </tr>
+
+                    <?php
+                    }
+                    ?>
                 </table>
 
             </div>
@@ -43,5 +69,5 @@ include 'parts/header.php';
     </div>
 </section>
 <?php
- include 'parts /footer.php';
- ?>
+include 'parts /footer.php';
+?>
