@@ -13,3 +13,7 @@ if(isset($_GET['si_no'])){
         echo 'Something wrong';
     }
 }
+
+
+//Redirect page to home page
+header('Location:index.php');

@@ -31,8 +31,6 @@ $allData = $db->query($sql);
 
                     <?php
                     while ($product = $allData->fetch_assoc()) {
-
-
                     ?>
 
                     <tr>
@@ -49,9 +47,10 @@ $allData = $db->query($sql);
                             <?php echo $product['product_piece']; ?>
                         </td>
                         <td>
-                            <a href="" class="btn btn-success btn-sm">Edit</a>
+                            <a href="edit.php?si_no=<?php echo $product['si_no']; ?>"
+                             class="btn btn-success btn-sm">Edit</a>
 
-                            <a href="delete.php?<?php echo $product['si_no']; ?>"
+                            <a href="delete.php?si_no=<?php echo $product['si_no']; ?>"
                                 onclick="return confirm('Do you went to delete this data? ')"
                                 class="btn btn-danger btn-sm">Delete</a>
 
