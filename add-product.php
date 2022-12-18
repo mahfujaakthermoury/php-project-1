@@ -40,7 +40,7 @@ if (isset($_POST['form_submit'])) {
             </div>
             <div class="col-sm-9">
                 <h3> + Add Product
-                    <a href="index.php" class="btn btn-success btn-sm float-end">
+                    <a href="index.php" class="btn btn-primary bg-opacity-10 btn-sm float-end">
                         Home
                     </a>
                 </h3>

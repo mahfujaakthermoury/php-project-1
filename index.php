@@ -5,7 +5,7 @@ include 'lib/db.php';
 $sql = "SELECT * FROM product  ";
 $allData = $db->query($sql);
 ?>
-<section class="content-section py-5">
+<section class="content-section py-5 ">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -15,12 +15,12 @@ $allData = $db->query($sql);
             </div>
             <div class="col-sm-9">
                 <h3> Product list
-                    <a href="add-product.php" class="btn btn-success btn-sm float-end">
+                    <a href="add-product.php" class="btn btn-secondary bg-opacity-25 btn-sm float-end">
                         + Add Product
                     </a>
                 </h3>
                 <hr>
-                <table class="table table-dark table-striped">
+                <table class="table table-info table-hover">
                     <tr>
                         <th>SI No.</th>
                         <th>Product name</th>
@@ -48,7 +48,7 @@ $allData = $db->query($sql);
                         </td>
                         <td>
                             <a href="edit.php?si_no=<?php echo $product['si_no']; ?>"
-                             class="btn btn-success btn-sm">Edit</a>
+                             class="btn btn-primary bg-opacity-10 btn-sm">Edit</a>
 
                             <a href="delete.php?si_no=<?php echo $product['si_no']; ?>"
                                 onclick="return confirm('Do you went to delete this data? ')"

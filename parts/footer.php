@@ -1,4 +1,4 @@
-<section class="footer-section py-5 bg-dark text-light text-center">
+<section class="footer-section py-5 bg-info bg-opacity-50 text-center">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
