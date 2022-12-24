@@ -27,13 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link active text-light fs-5" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" href="add-product.php">Add Product</a>
+                        <a class="nav-link active text-light fs-5" href="reg.php">Registration</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" href="edit.php">Edit Product</a>
+                        <a class="nav-link active text-light fs-5" href="login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light fs-5" href="logout.php">Logout</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

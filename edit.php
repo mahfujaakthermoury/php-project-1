@@ -1,4 +1,5 @@
 <?php
+include 'parts/auth.php';
 include 'parts/header.php';
 include 'lib/db.php';
 
@@ -39,7 +40,7 @@ $result = $db->query($sql);
             </div>
             <div class="col-sm-9">
                 <h3> Edit Product Information
-                    <a href="index.php" class="btn btn-success btn-sm float-end">
+                    <a href="index.php" class="btn btn-primary btn-sm float-end">
                         Home
                     </a>
                 </h3>

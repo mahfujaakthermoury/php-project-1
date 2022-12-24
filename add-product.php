@@ -1,4 +1,5 @@
 <?php
+include 'parts/auth.php';
 include 'parts/header.php';
 include 'lib/db.php';
 ?>

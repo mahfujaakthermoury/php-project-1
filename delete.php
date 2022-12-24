@@ -17,3 +17,4 @@ if(isset($_GET['si_no'])){
 
 //Redirect page to home page
 header('Location:index.php');
+?>

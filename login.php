@@ -7,7 +7,7 @@ if(isset($_POST['form_submit'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM user WHERE  email =' $email' AND password='$password' ";
+    $sql="SELECT * FROM user WHERE  email='$email' AND password='$password' ";
     $result = $db->query($sql);
 
     if($result->num_rows>0){
