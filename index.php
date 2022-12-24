@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-if(isset($_SESSION['log_status'])) and $_SESSION['log_status']==true{
+if(isset($_SESSION['log_status']) and $_SESSION['log_status']==true){
     //The user can access
 }
 else{
-    hrader('Location:login.php');
+    header('Location:login.php');
 }
 ?>
 

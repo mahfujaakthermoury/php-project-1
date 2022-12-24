@@ -1,16 +1,16 @@
 <?php
-require_once "lib/db.php";
+session_start();
+require_once ("lib/db.php");
 
 if(isset($_POST['form_submit'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM user WHERE name = '$name' email =' $email' AND password='$password' ";
+    $sql = "SELECT * FROM user WHERE  email =' $email' AND password='$password' ";
     $result = $db->query($sql);
 
     if($result->num_rows>0){
-        session_start();
         $_SESSION['log_status'] = true;
         header('Location:index.php');
     }else{
