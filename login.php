@@ -13,11 +13,14 @@ if (isset($_POST['form_submit'])) {
         $_SESSION['log_status'] = true;
         header('Location:index.php');
     } else {
-        echo 'Login faield';
+        echo   '<div class="container text-center text-danger w-25 ">
+                    <div class=" alert-secondary">
+                       <p>Your login has faield.</p>
+                    </div>
+                </div>';
     }
 }
 ?>
-
 <!doctype html>
 <html lang="en">
 
@@ -34,9 +37,9 @@ if (isset($_POST['form_submit'])) {
 
 <body>
     <section class="content-section py-5 text-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
+        <div class="container d-flex justify-content-center">
+            <div class="row w-50 ">
+                <div class="col-sm-12 ">
                     <h1 class="text-center ">Login</h1>
                     <br><br>
                     <form action="login.php" method="POST">
@@ -53,16 +56,26 @@ if (isset($_POST['form_submit'])) {
 
                         <input name="password" type="password" class="form-control" id="password"
                             placeholder="Type password">
-                    </div><br>
+                    </div><br><br>
 
                     <div class="md-3">
-                        <input type="submit" value="Login" class="btn btn-primary" name="form_submit">
+                        <input type="submit" value="Login" class="btn btn-primary"
+                         style="margin-left: 460px;" name="form_submit">                       
+                    </div>
+                    <br>
+                    <div>
+                        <p class="text-dark text-center">You have no account? <a href="reg.php" class="text-decoration-none">Registration</a> here</p>
+                    
                     </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
